@@ -20,8 +20,8 @@ const Header = () => {
           <Link href="/">
             <span className="cursor-pointer absolute w-auto h-auto top-0 px-0 mx-0  block w-9/12 h-full">
             <Image
-            src="./home.png"
-            alt="Quest Logo"
+            src="home.png"
+            alt="Iv Quest Logo"
             width="300px"
             height="150px"
             />
