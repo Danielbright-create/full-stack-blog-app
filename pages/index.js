@@ -1,14 +1,16 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import { PostCard, Categories, PostWidget } from '../components'
 import { getPosts } from '../services'
-import { FeaturedPosts } from '../sections/index'
+import { FeaturedPosts } from '../sections'
 
 
-export default function Home({ posts }) {
+export default function Home( { posts }) {
   return (
     <div className="container mx-auto px-10 mb-8 ">
       <Head>
         <title>Iv Quest </title>
+        <Link rel="icon" type="image/png" href="favicon.png" />
       </Head>
       < FeaturedPosts />
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12"> 
