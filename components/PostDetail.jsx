@@ -15,10 +15,7 @@ const PostDetail = ({ post }) => {
         modifiedText = (<em key={index}>{text}</em>);
       }
 
-      if (obj.link) {
-        modifiedText = (<em key={index}>{text}</em>);
-      }
-
+  
       if (obj.underline) {
         modifiedText = (<u key={index}>{text}</u>);
       }
@@ -30,6 +27,9 @@ const PostDetail = ({ post }) => {
 
       case 'paragraph':
         return <p key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
+
+        case 'link':
+          return <link key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</link>;
 
       case 'heading-four':
         return <h4 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
